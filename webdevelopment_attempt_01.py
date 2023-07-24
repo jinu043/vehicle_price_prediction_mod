@@ -49,14 +49,7 @@ def user_input_featutres():
 df = user_input_featutres()
 with st.container():
     st.subheader("Vehicle Input Features")
-    st.dataframe(
-        df,
-        column_config={
-            "widgets": st.column_config.Column(
-                width="medium"
-            )
-        }
-    )
+    st.dataframe(df)
 
 data["model_year"] = data["model_year"].astype("category")
 cat_cols = data.select_dtypes(include=["object", "category"]).columns.tolist()
@@ -107,11 +100,5 @@ with st.container():
                   (data["dealer_name"]==df.loc[0,"dealer_name"])&(data["model_year"]==df.loc[0,"model_year"])&(data["location"]==df.loc[0,"location"])&
                   (data["fuel_type"]==df.loc[0,"fuel_type"])&(data["mileage"]==df.loc[0,"mileage"])&(data["spec"]==df.loc[0,"spec"])]["price"].reset_index(drop=True)
     # record = pd.concat([selected_data,actual_price], axis=1)
-    st.dataframe(
-        actual_price,
-        column_config={
-            "widgets": st.column_config.Column(
-                width="medium"
-            )
-        }
-    )
+    st.dataframe(actual_price)
+           

@@ -98,7 +98,7 @@ with st.container():
     actual_price = ["AED " + x for x in data[(data["vehicle_name"]==df.loc[0,"vehicle_name"])&(data["model"]==df.loc[0,"model"])&
                   (data["vehicle_type"]==df.loc[0,"vehicle_type"])&(data["export_status"]==df.loc[0,"export_status"])&
                   (data["dealer_name"]==df.loc[0,"dealer_name"])&(data["model_year"]==df.loc[0,"model_year"])&(data["location"]==df.loc[0,"location"])&
-                  (data["fuel_type"]==df.loc[0,"fuel_type"])&(data["mileage"]==df.loc[0,"mileage"])&(data["spec"]==df.loc[0,"spec"])]["price"].tolist().str]
+                  (data["fuel_type"]==df.loc[0,"fuel_type"])&(data["mileage"]==df.loc[0,"mileage"])&(data["spec"]==df.loc[0,"spec"])]["price"].tolist().]
     # record = pd.concat([selected_data,actual_price], axis=1)
     st.write(actual_price)
            

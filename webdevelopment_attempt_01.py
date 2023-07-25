@@ -104,8 +104,8 @@ with st.container():
         # record = pd.concat([selected_data,actual_price], axis=1)
         st.dataframe(actual_price)
         with col2:
-        count = str(data[data["dealer_name"]==df.loc[0,"dealer_name"]].shape[0])
-        st.write("### Total Vehicles Count : ")
-        st.write(data[data["dealer_name"]==df.loc[0,"dealer_name"]]["dealer_name"].iloc[0])
-        st.write(count)
+            count = str(data[data["dealer_name"]==df.loc[0,"dealer_name"]].shape[0])
+            st.write("### Total Vehicles Count : ")
+            st.write(data[data["dealer_name"]==df.loc[0,"dealer_name"]]["dealer_name"].iloc[0])
+            st.write(count)
            
